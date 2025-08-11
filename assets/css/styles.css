@@ -1,0 +1,230 @@
+/* === Tema oscuro con acento verde esmeralda === */
+:root {
+    --bg: #0b1220; /* fondo principal oscuro */
+    --surface: #0f172a; /* superficie (secciones, tiras) */
+    --card: #111827; /* tarjetas/paneles */
+    --txt: #e5e7eb; /* texto principal */
+    --muted: #9ca3af; /* texto secundario */
+    --border: #1f2937; /* bordes sutiles */
+    --accent: #10B981; /* verde esmeralda */
+    --accent-2: #34D399; /* verde claro */
+    --shadow: 0 20px 60px rgba(0,0,0,.35);
+}
+
+html, body {
+    height: 100%;
+    background: var(--bg);
+    color: var(--txt);
+}
+
+body {
+    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+}
+
+h1, h2, h3, .brand {
+    font-family: Poppins, Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+}
+
+/* NAV */
+.navbar {
+    background: var(--surface) !important;
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: var(--txt) !important
+}
+
+.navbar .nav-link {
+    color: var(--muted) !important
+}
+
+    .navbar .nav-link:hover {
+        color: #fff !important
+    }
+
+/* Botones */
+.btn-accent {
+    background: var(--accent);
+    color: #0b1220;
+    border: none;
+    border-radius: 14px;
+    padding: .9rem 1.2rem;
+    font-weight: 700;
+    box-shadow: 0 10px 30px rgba(16,185,129,.25)
+}
+
+    .btn-accent:hover {
+        filter: brightness(.95)
+    }
+
+.btn-ghost {
+    border: 1.5px solid var(--border);
+    color: #e5e7eb;
+    padding: .9rem 1.2rem;
+    border-radius: 14px;
+    font-weight: 600;
+    background: transparent
+}
+
+    .btn-ghost:hover {
+        background: #0b1320
+    }
+
+/* Chips / Badges */
+.chip {
+    background: rgba(16,185,129,.15);
+    color: var(--accent);
+    border-radius: 999px;
+    padding: .25rem .6rem;
+    font-weight: 600;
+    font-size: .85rem
+}
+
+.badge-inc {
+    background: rgba(16,185,129,.12);
+    color: #a7f3d0;
+    border: 1px dashed rgba(16,185,129,.35);
+    border-radius: 999px;
+    padding: .2rem .6rem;
+    font-size: .8rem
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    min-height: 80vh;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+    .hero:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(60% 60% at 80% 0%, rgba(16,185,129,.12), transparent 60%), radial-gradient(40% 40% at 0% 100%, rgba(16,185,129,.08), transparent 60%), url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+        opacity: .22;
+        filter: saturate(1.05) contrast(1.05)
+    }
+
+.hero-inner {
+    position: relative;
+    z-index: 2
+}
+
+.glass {
+    backdrop-filter: blur(8px);
+    background: rgba(15,23,42,.65);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+}
+
+section {
+    padding: clamp(48px, 6vw, 88px) 0;
+}
+
+/* Cartas y superficies */
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: none;
+}
+
+.portfolio-card {
+    background: var(--card) !important;
+    border-color: var(--border) !important
+}
+
+    .portfolio-card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 14px
+    }
+
+/* Tira promo y secciones claras -> usar surface oscura */
+.bg-white {
+    background: var(--surface) !important;
+}
+
+.text-muted {
+    color: var(--muted) !important
+}
+
+/* FAQ acordeón (modo oscuro) */
+.accordion-item {
+    background: var(--surface);
+    border: 1px solid var(--border)
+}
+
+.accordion-button {
+    background: var(--surface);
+    color: var(--txt)
+}
+
+    .accordion-button:not(.collapsed) {
+        color: #fff;
+        background: linear-gradient(0deg, rgba(16,185,129,.08), rgba(16,185,129,.08)), var(--surface);
+        box-shadow: none
+    }
+
+    .accordion-button:focus {
+        box-shadow: 0 0 0 .25rem rgba(16,185,129,.2)
+    }
+
+.accordion-body {
+    color: var(--muted)
+}
+
+/* Footer */
+footer {
+    background: #0b1220;
+    color: #cfe7de
+}
+
+    footer a {
+        color: #d1fae5;
+        text-decoration: none
+    }
+
+        footer a:hover {
+            text-decoration: underline
+        }
+
+/* WhatsApp Float */
+.wa-float {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    background: #25D366;
+    color: #0b1220;
+    border-radius: 999px;
+    padding: .8rem 1rem;
+    box-shadow: 0 14px 34px rgba(37,211,102,.35);
+    font-weight: 700;
+}
+
+    .wa-float img {
+        width: 24px;
+        height: 24px
+    }
+
+/* Reveal */
+.reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: all .6s ease
+}
+
+    .reveal.show {
+        opacity: 1;
+        transform: none
+    }
