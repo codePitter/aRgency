@@ -105,7 +105,7 @@ h1, h2, h3, .brand {
         content: "";
         position: absolute;
         inset: 0;
-        background: radial-gradient(60% 60% at 80% 0%, rgba(16,185,129,.12), transparent 60%), radial-gradient(40% 40% at 0% 100%, rgba(16,185,129,.08), transparent 60%), url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+        background: radial-gradient(60% 60% at 80% 0%, rgba(16,185,129,.12), transparent 60%), radial-gradient(40% 40% at 0% 100%, rgba(16,185,129,.08), transparent 60%), url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop') center no-repeat;
         opacity: .22;
         filter: saturate(1.05) contrast(1.05)
     }
