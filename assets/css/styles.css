@@ -26,6 +26,24 @@ h1, h2, h3, .brand {
 }
 
 /* NAV */
+/* Toggler claro (ideal sobre navbar oscura) */
+.navbar-toggler {
+    border-color: rgba(232,243,238,.45); /* borde más visible */
+}
+
+    .navbar-toggler:hover {
+        border-color: rgba(232,243,238,.75);
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: 0 0 0 .2rem rgba(11,191,125,.35); /* focus accesible en esmeralda */
+    }
+
+.navbar-toggler-icon {
+    /* SVG con líneas claras */
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(232,243,238,0.95)' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
 .navbar {
     background: var(--surface) !important;
     border-bottom: 1px solid var(--border);
@@ -252,4 +270,10 @@ span.h4.mb-0[style*="font-weight:800"] {
 }
 .form-text {
     color:#ffdedeca;
+}
+/* Oculta el chip "NEW" debajo de 366px */
+@media (max-width: 380px) {
+    .navbar-brand .chip {
+        display: none !important;
+    }
 }
