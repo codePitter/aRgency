@@ -92,13 +92,14 @@ h1, h2, h3, .brand {
 }
 
 /* HERO */
+
 .hero {
-    position: relative;
-    min-height: 80vh;
+    min-height: 75vh;
     display: grid;
     place-items: center;
-    overflow: hidden;
+    padding: 6vh 0;
 }
+
 
     .hero:before {
         content: "";
@@ -125,7 +126,21 @@ h1, h2, h3, .brand {
 section {
     padding: clamp(48px, 6vw, 88px) 0;
 }
+.hero .glass {
+    background: rgba(12,16,24,.70); /* más contraste en dark */
+    color: #e8f3ee;
+    box-shadow: 0 24px 70px rgba(0,0,0,.45);
+}
 
+.hero h1 {
+    font-weight: 800;
+    letter-spacing: .2px
+}
+
+.hero [href^="https://wa.me"] {
+    background: #0BBF7D;
+    color: #05130e;
+}
 /* Cartas y superficies */
 .card {
     background: var(--card);
@@ -228,3 +243,13 @@ footer {
         opacity: 1;
         transform: none
     }
+strong {
+    color: #f0f0f0ce; /* Color claro para buen contraste en tema oscuro */
+}
+strong,
+span.h4.mb-0[style*="font-weight:800"] {
+    color: #f0f0f0ce; /* Color claro para buen contraste en tema oscuro */
+}
+.form-text {
+    color:#ffdedeca;
+}
