@@ -1,1 +1,1 @@
-Pagina principal de mi emprendimiento
+Pagina principal de mi emprendimiento unificado.
